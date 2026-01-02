@@ -7,7 +7,7 @@ import { MacbookModel } from "./models/Macbook";
 import { useMediaQuery } from "react-responsive";
 import { Html } from "@react-three/drei";
 import { useMacbookStore } from "../store";
-import { preload } from "react-dom";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
