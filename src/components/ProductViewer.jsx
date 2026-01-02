@@ -65,8 +65,11 @@ const ProductViewer = () => {
         camera={{ position: [0, 2, 5], fov: 50, far: 100, near: 0.1 }}
       >
         <StudioLights intensity={1} />
-  
-        <ModelSwitcher isMobile={isMobile} scale={isMobile ? scale - 0.03 : scale} />
+
+        <ModelSwitcher
+          isMobile={isMobile}
+          scale={isMobile ? scale - 0.03 : scale}
+        />
       </Canvas>
     </section>
   );

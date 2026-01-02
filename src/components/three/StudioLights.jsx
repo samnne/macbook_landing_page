@@ -1,6 +1,5 @@
 import { Environment, Lightformer } from "@react-three/drei";
 
-
 const StudioLights = () => {
   return (
     <group name="lights">
