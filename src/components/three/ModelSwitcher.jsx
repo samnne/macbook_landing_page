@@ -32,24 +32,24 @@ const moveGroup = (group, x) => {
 const ModelSwitcher = ({ scale, isMobile }) => {
   const smallMacRef = useRef();
   const largeMacRef = useRef();
-
-  const showLargeMacbook = scale === 0.08 || scale === 0.05;
+  const SCALE_LARGE_MACKBOOK = 0.08;
+  const SHOW_LARGE_MOBILE = 0.05;
+  const showLargeMacbook =
+    scale === SCALE_LARGE_MACKBOOK || scale === SHOW_LARGE_MOBILE;
 
   useGSAP(() => {
-    if (showLargeMacbook){
+    if (showLargeMacbook) {
+      moveGroup(smallMacRef.current, -OFFSET_DISTANCE);
+      moveGroup(largeMacRef.current, 0);
 
-        moveGroup(smallMacRef.current, -OFFSET_DISTANCE);
-        moveGroup(largeMacRef.current, 0);
-    
-        fadeMeshes(smallMacRef.current, 0);
-        fadeMeshes(largeMacRef.current, 1);
-    } else{
-        moveGroup(smallMacRef.current, 0);
-        moveGroup(largeMacRef.current, OFFSET_DISTANCE);
-    
-        fadeMeshes(smallMacRef.current, 1);
-        fadeMeshes(largeMacRef.current, 0);
-        
+      fadeMeshes(smallMacRef.current, 0);
+      fadeMeshes(largeMacRef.current, 1);
+    } else {
+      moveGroup(smallMacRef.current, 0);
+      moveGroup(largeMacRef.current, OFFSET_DISTANCE);
+
+      fadeMeshes(smallMacRef.current, 1);
+      fadeMeshes(largeMacRef.current, 0);
     }
   }, [scale]);
   const controlsConfig = {
