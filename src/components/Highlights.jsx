@@ -1,13 +1,14 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
+import { asset } from "../constants";
 import { useMediaQuery } from "react-responsive";
 
 const Highlights = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
   useGSAP(() => {
-    gsap.to(".left-column", {
+    gsap.to([".left-column", ".right-column"], {
       scrollTrigger: {
         trigger: "#highlights",
         start: isMobile ? "bottom bottom" : "top center",
@@ -28,25 +29,25 @@ const Highlights = () => {
       <div className="masonry">
         <div className="left-column">
           <div>
-            <img src="/laptop.png" alt="Laptop" />
+            <img src={asset("/laptop.png")} alt="Laptop" />
             <p>Fly through demanding tasks wup to 9.8x faster.</p>
           </div>
           <div>
-            <img src="/sun.png" alt="Laptop" />
+            <img src={asset("/sun.png")} alt="Laptop" />
             <p>
               A stunning<br></br> Liquid Retina XDR <br></br> display.
             </p>
           </div>
         </div>
         <div className="right-column">
-          <div className="apple-gradient">
-            <img src="/ai.png" alt="AI" />
+            <div className="apple-gradient">
+            <img src={asset("/ai.png")} alt="AI" />
             <p>
               Built for <br /> <span>Apple Intelligence.</span>
             </p>
           </div>
           <div>
-            <img src="/battery.png" alt="Battery" />
+            <img src={asset("/battery.png")} alt="Battery" />
             <p>
               Up to
               <span className="green-gradient"> 14 more hours </span>

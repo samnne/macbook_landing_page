@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
+import { asset } from "../constants";
 import { useMediaQuery } from "react-responsive";
 
 const Showcase = () => {
@@ -31,9 +32,9 @@ const Showcase = () => {
   return (
     <section id="showcase">
       <div className="media">
-        <video src="/videos/game.mp4" loop autoPlay muted playsInline></video>
+        <video src={asset("/videos/game.mp4")} loop autoPlay muted playsInline></video>
         <div className="mask">
-          <img src="/mask-logo.svg" alt="" />
+          <img src={asset("/mask-logo.svg")} alt="" />
         </div>
       </div>
       <div className="content ">

@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import StudioLights from "./three/StudioLights";
-import { features, featureSequence } from "../constants";
+import { features, featureSequence, asset } from "../constants";
 import clsx from "clsx";
 import { MacbookModel } from "./models/Macbook";
 import { useMediaQuery } from "react-responsive";
@@ -58,15 +58,15 @@ const ModelScroll = () => {
     }
 
     timeline
-      .call(() => setTexture("/videos/feature-1.mp4"))
+      .call(() => setTexture(asset("/videos/feature-1.mp4")))
       .to(".box1", { opacity: 1, y: 0, delay: 1 })
-      .call(() => setTexture("/videos/feature-2.mp4"))
+      .call(() => setTexture(asset("/videos/feature-2.mp4")))
       .to(".box2", { opacity: 1, y: 0, delay: 1 })
-      .call(() => setTexture("/videos/feature-3.mp4"))
+      .call(() => setTexture(asset("/videos/feature-3.mp4")))
       .to(".box3", { opacity: 1, y: 0, delay: 1 })
-      .call(() => setTexture("/videos/feature-4.mp4"))
+      .call(() => setTexture(asset("/videos/feature-4.mp4")))
       .to(".box4", { opacity: 1, y: 0, delay: 1 })
-      .call(() => setTexture("/videos/feature-5.mp4"))
+      .call(() => setTexture(asset("/videos/feature-5.mp4")))
       .to(".box5", { opacity: 1, y: 0, delay: 1 })
   }, []);
 

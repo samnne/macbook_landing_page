@@ -10,6 +10,7 @@ Title: macbook pro M3 16 inch 2024
 
 import React, { useEffect } from "react";
 import { useGLTF, useVideoTexture } from "@react-three/drei";
+import { asset } from "../../constants";
 import { useMacbookStore } from "../../store";
 import { noChangeParts } from "../../constants";
 import { Color } from "three";
@@ -17,9 +18,7 @@ import { Color } from "three";
 export function MacbookModel(props) {
   const { color, texture } = useMacbookStore();
 
-  const { nodes, materials, scene } = useGLTF(
-    "/models/macbook-transformed.glb"
-  );
+  const { nodes, materials, scene } = useGLTF(asset("/models/macbook-transformed.glb"));
 
   const screen = useVideoTexture(texture);
   useEffect(() => {
@@ -135,4 +134,4 @@ export function MacbookModel(props) {
   );
 }
 
-useGLTF.preload("/models/macbook-transformed.glb");
+useGLTF.preload(asset("/models/macbook-transformed.glb"));

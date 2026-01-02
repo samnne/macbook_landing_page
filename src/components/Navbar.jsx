@@ -1,10 +1,10 @@
-import { navLinks } from "../constants";
+import { asset, navLinks } from "../constants";
 
 const Navbar = () => {
   return (
     <header>
       <nav>
-        <img src="/logo.svg" alt="Apple Logo" />
+        <img src={asset("/logo.svg")} alt="Apple Logo" />
         <ul>
           {navLinks.map(({ label }) => {
             return (
@@ -16,10 +16,10 @@ const Navbar = () => {
         </ul>
         <div className="flex-center gap-3">
           <button>
-            <img src="/search.svg" alt="Search" />
+            <img src={asset("/search.svg")} alt="Search" />
           </button>
           <button>
-            <img src="/cart.svg" alt="Search" />
+            <img src={asset("/cart.svg")} alt="Search" />
           </button>
         </div>
       </nav>
