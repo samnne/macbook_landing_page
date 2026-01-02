@@ -1,17 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MacBook Pro (M4) — Mock Landing Page
 
-Currently, two official plugins are available:
+A lightweight mock landing page showcasing a MacBook Pro with the hypothetical M4 chip. Built with React, Vite, and Three.js to demonstrate a responsive product viewer, animated sections, and simple controls for switching models and colors.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Getting Started**
 
-## React Compiler
+- Install dependencies: `npm install`
+- Run development server: `npm run dev`
+- Build for production: `npm run build`
+- Preview production build: `npm run preview`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Highlights / Features**
 
-## Expanding the ESLint configuration
+- Interactive 3D product viewer using `@react-three/fiber` and `@react-three/drei`.
+- Model switching between 14" and 16" variants, color and scale controls.
+- Scroll-triggered animations with `gsap` and `@gsap/react`.
+- Modular React components for Hero, Showcase, Performance, Features, Highlights, Navbar, and Footer.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# macbook_landing_page
+**Project Structure (important files)**
+
+- `index.html` — App entry.
+- `src/main.jsx` — React bootstrap.
+- `src/App.jsx` — Page layout + component imports.
+- `src/components/` — UI and Three.js components (see `ProductViewer.jsx`, `three/ModelSwitcher.jsx`, models).
+- `src/store/index.js` — Zustand store for color/scale/texture state.
+- `public/` — Static assets (models, videos, fonts).
+
+**Dependencies**
+
+- React, Vite
+- `three`, `@react-three/fiber`, `@react-three/drei`
+- `gsap`, `@gsap/react`
+- `zustand`, `clsx`, `react-responsive`
+
