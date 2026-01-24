@@ -34,4 +34,4 @@ A lightweight mock landing page showcasing a MacBook Pro with the hypothetical M
 - `zustand`, `clsx`, `react-responsive`
 
 # View it Here!
-**[Click Me](https://samnne.github.io/macbook_landing_page)**
+**[Click Me](https://samnne.github.io/m4macbook)**
